@@ -4,11 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { SeriesComponent } from './series/series.component';
 import { MoviesComponent } from './movies/movies.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
-  declarations: [AppComponent, MoviesComponent, SeriesComponent],
+  declarations: [AppComponent, MoviesComponent, CategoriesComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
