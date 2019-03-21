@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm">
+    <h2>Movie title: {{ movie.title }}</h2>
+    <p>Directed by: {{ movie.director }}</p>
+    <p>Year: {{ movie.year }}</p>
+    <iframe
+      [width]="width"
+      [height]="height"
+      [src]="createSafeYoutubeUrl()"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
