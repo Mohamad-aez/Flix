@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { OnInit, Component, Input } from '@angular/core';
+import { Category } from 'src/app/shared/models/category.model';
 
 @Component({
   selector: 'app-categories',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  @Input()
+  public category: Category;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

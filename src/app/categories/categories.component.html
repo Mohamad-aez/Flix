@@ -1,3 +1,7 @@
-<p>
-  categories works!
-</p>
+<p>{{ category.name }}</p>
+
+<ul class="list-group list-group-horizontal-xl">
+  <li class="list-group-item">
+    <app-movie *ngFor="let movie of category.movie" [movie]="movie"></app-movie>
+  </li>
+</ul>
