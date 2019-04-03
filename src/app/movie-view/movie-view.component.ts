@@ -33,7 +33,7 @@ export class MovieViewComponent implements OnInit {
   public getInfo(url: string) {
     for (let x of this.service.categories) {
       for (let x1 of x.movie) {
-        if (x1.urlID == url) {
+        if (x1.urlID === url) {
           this.movie = x1;
         }
       }

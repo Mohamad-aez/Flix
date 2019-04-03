@@ -8,6 +8,9 @@ import { MainViewComponent } from './main-view/main-view.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { MovieComponent } from './movie/movie.component';
 import { MovieViewComponent } from './movie-view/movie-view.component';
+import { FormComponent } from './form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FullMovieComponent } from './full-movie/full-movie.component';
 
 @NgModule({
   declarations: [
@@ -15,9 +18,11 @@ import { MovieViewComponent } from './movie-view/movie-view.component';
     CategoriesComponent,
     MainViewComponent,
     MovieComponent,
-    MovieViewComponent
+    MovieViewComponent,
+    FormComponent,
+    FullMovieComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })

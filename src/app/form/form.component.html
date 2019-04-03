@@ -1,0 +1,53 @@
+<h1>Welcome to the admin page!</h1>
+Fields with a <b>*</b> are obligatory
+<hr />
+<form [formGroup]="form" (submit)="onFormSubmit()">
+  <div class="form-group">
+    <select formControlName="category">
+      <option value="Animals Life">Animals Life</option>
+      <option value="Sports">Sports</option>
+      <option value="Comedy">Comedy</option>
+      <option value="Crime">Crime</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Title*</label>
+    <input
+      placeholder="Title"
+      class="form-control"
+      type="text"
+      formControlName="title"
+    />
+  </div>
+  <div class="form-group">
+    <label>Director*</label>
+    <input
+      placeholder="Director"
+      class="form-control"
+      type="text"
+      formControlName="director"
+    />
+  </div>
+  <div class="form-group">
+    <label>Year*</label>
+    <input
+      placeholder="Year"
+      class="form-control"
+      type="number"
+      formControlName="year"
+    />
+  </div>
+  <div class="form-group">
+    <label>UrlID*</label>
+    <input
+      placeholder="UrlId"
+      class="form-control"
+      type="text"
+      formControlName="urlID"
+    />
+  </div>
+
+  <button type="submit" class="btn btn-primary" [disabled]="form?.invalid">
+    Submit
+  </button>
+</form>
