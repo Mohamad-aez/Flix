@@ -6,6 +6,8 @@ import { Movie } from './shared/models/movie.model';
 import { Category } from './shared/models/category.model';
 import { MovieComponent } from './movie/movie.component';
 import { MovieViewComponent } from './movie-view/movie-view.component';
+import { FormComponent } from './form/form.component';
+import { FullMovieComponent } from './full-movie/full-movie.component';
 
 const routes: Routes = [
   {
@@ -15,6 +17,14 @@ const routes: Routes = [
   {
     path: 'movie/:urlID',
     component: MovieViewComponent
+  },
+  {
+    path: 'fullMovie/:urlID',
+    component: FullMovieComponent
+  },
+  {
+    path: 'admin',
+    component: FormComponent
   },
 
   {

@@ -1,7 +1,7 @@
-<p>{{ category.name }}</p>
+<div class="container" style="padding-top: 20px">
+  <h2 style="color: red ; padding-bottom: 20px">{{ category.name }}</h2>
 
-<ul class="list-group list-group-horizontal-xl">
-  <li class="list-group-item">
+  <div class="row">
     <app-movie *ngFor="let movie of category.movie" [movie]="movie"></app-movie>
-  </li>
-</ul>
+  </div>
+</div>

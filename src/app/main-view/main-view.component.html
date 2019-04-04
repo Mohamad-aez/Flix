@@ -1,12 +1,12 @@
-<div style="text-align:center">
-  <img
-    width="500"
-    alt="Angular Logo"
-    src="https://dimamukhin.github.io/ChillFlix/src/ChillFlix_logo.png"
-  />
+<div class="mx-auto">
+  <div class="text-center">
+    <h1 style="font: 100px bolder ;color: red">
+      CHILLFLIX
+    </h1>
+  </div>
+  <app-categories
+    *ngFor="let category of categories"
+    [category]="category"
+  ></app-categories>
+  <a routerLink="/admin" style="color: red">Navigate to Admin Page</a>
 </div>
-
-<app-categories
-  *ngFor="let category of categories"
-  [category]="category"
-></app-categories>

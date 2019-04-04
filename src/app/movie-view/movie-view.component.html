@@ -1,10 +1,26 @@
-<h2>{{ movie.title }}</h2>
+<div (click)="onSelectMovie(movie)" style="position: relative;">
+  <div
+    style="position: absolute;
+    padding-top: 100px;
+  align-content: center;
+  align-items: center;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;"
+  >
+    <h2>{{ movie.title }}</h2>
 
-<iframe
-  [src]="createSaveUrl(urlId)"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
-<p>Directed by: {{ movie.director }}</p>
-<p>Year: {{ movie.year }}</p>
+    <iframe
+      [src]="createSaveUrl(urlId)"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <p>Description by: {{ movie.description }}</p>
+    <p>Year: {{ movie.year }}</p>
+
+    <a routerLink="/home">Navigate to home</a>
+  </div>
+</div>

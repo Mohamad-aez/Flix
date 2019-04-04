@@ -1,13 +1,11 @@
-<!-- <a routerLink="/movie" -->
-<h2 (click)="onSelectMovie(movie)">Movie title: {{ movie.title }}</h2>
+<div class="col-sm">
+  <div (click)="onSelectMovie(movie)">
+    <h5>{{ movie.title }}</h5>
 
-<iframe
-  [width]="width"
-  [height]="height"
-  [src]="createSafeYoutubeUrl()"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
-<p>Directed by: {{ movie.director }}</p>
-<p>Year: {{ movie.year }}</p>
+    <img
+      src="http://img.youtube.com/vi/{{ movie.urlID }}/0.jpg"
+      width="240"
+      height="200"
+    />
+  </div>
+</div>
