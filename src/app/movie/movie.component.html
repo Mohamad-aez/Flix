@@ -1,12 +1,11 @@
 <div class="col-sm">
-  <h2 (click)="onSelectMovie(movie)">{{ movie.title }}</h2>
+  <div (click)="onSelectMovie(movie)">
+    <h5>{{ movie.title }}</h5>
 
-  <iframe
-    [width]="width"
-    [height]="height"
-    [src]="createSafeYoutubeUrl()"
-    frameborder="0"
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-  ></iframe>
+    <img
+      src="http://img.youtube.com/vi/{{ movie.urlID }}/0.jpg"
+      width="240"
+      height="200"
+    />
+  </div>
 </div>

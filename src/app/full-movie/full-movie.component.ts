@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '../shared/models/movie.model';
 import { MohdService } from '../shared/service/mohd.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
@@ -12,16 +12,30 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 export class FullMovieComponent implements OnInit {
   public movie: Movie;
   public urlId: string;
-  constructor(
-    private service: MohdService,
-    private route: ActivatedRoute,
-    private readonly sanitizer: DomSanitizer
-  ) {}
+  ngOnInit() {
+    let urlID = this.route.snapshot.paramMap.get('urlID');
+    this.urlId = urlID;
+    // this.getInfo(this.urlId);
+  }
 
-  ngOnInit() {}
+  // public getInfo(url: string) {
+  //   for (let x of this.service.categories) {
+  //     for (let x1 of x.movie) {
+  //       if (x1.urlID === url) {
+  //         this.movie = x1;
+  //       }
+  //     }
+  //   }
+  // }
   public createSaveUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(
       'https://www.youtube.com/embed/' + url
     );
   }
+
+  constructor(
+    private service: MohdService,
+    private route: ActivatedRoute,
+    private readonly sanitizer: DomSanitizer
+  ) {}
 }

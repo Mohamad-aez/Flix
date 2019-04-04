@@ -4,7 +4,7 @@ import { Movie } from '../shared/models/movie.model';
 export class MovieForm extends FormGroup {
   category: any;
   title: string;
-  director: string;
+  description: string;
   year: number;
   urlID: string;
   constructor() {
@@ -14,7 +14,7 @@ export class MovieForm extends FormGroup {
         Validators.required,
         Validators.maxLength(50)
       ]),
-      director: new FormControl('', [
+      description: new FormControl('', [
         Validators.required,
         Validators.maxLength(50)
       ]),
@@ -31,7 +31,7 @@ export class MovieForm extends FormGroup {
     return {
       category: this.controls.category.value,
       title: this.controls.title.value,
-      director: this.controls.director.value,
+      description: this.controls.description.value,
       urlID: this.controls.urlID.value,
       year: this.controls.year.value
     };

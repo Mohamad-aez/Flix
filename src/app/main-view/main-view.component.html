@@ -1,13 +1,12 @@
-<div>
-  <img
-    width="100%"
-    alt="Angular Logo"
-    id="logo"
-    src="https://pl.scdn.co/images/pl/default/7556ae7833910ec96ed29be670d4e0b3d31af288"
-  />
+<div class="mx-auto">
+  <div class="text-center">
+    <h1 style="font: 100px bolder ;color: red">
+      CHILLFLIX
+    </h1>
+  </div>
+  <app-categories
+    *ngFor="let category of categories"
+    [category]="category"
+  ></app-categories>
+  <a routerLink="/admin" style="color: red">Navigate to Admin Page</a>
 </div>
-
-<app-categories
-  *ngFor="let category of categories"
-  [category]="category"
-></app-categories>
